@@ -1,0 +1,15 @@
+# hml ou pro
+app_environment: 'hml'
+app_name: 'quarkus-hello'
+app_namespace: '{{ app_name }}-{{ app_environment }}'
+
+quay_repository: '{{ app_name }}'
+quay_secret_name: 'sct-quay-robot'
+quay_route: 'smanager-registry-quay-quay.apps.cluster-qd78t.dynamic.redhatworkshops.io'
+quay_org_name: "{{ company_name }}"
+quay_robot_token: 'QBTKS345CQ394KZVZ4CD614F58QODAV3IVVDAFO93UOC3SOVCHJHSGRDGOP2VDHR'
+quay_application_access_token: '1ziR7Ejtb81rKrQ6FMjiBahX3AO0a2XuE63Dh53X'
+
+webhook_secret_token: 'defina-seu-token-aqui-para-webhook'
+
+repo_url: 'http://gogs-gogs.apps.cluster-qd78t.dynamic.redhatworkshops.io'

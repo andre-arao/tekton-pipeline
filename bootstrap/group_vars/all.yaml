@@ -1,0 +1,41 @@
+company_name: 'smanager'
+
+pipeline_namespace: "{{ company_name }}-pipeline"
+
+sa_cluster_admin: 'cluster-admin-sa'
+sa_cluster_admin_token: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IklDQUd0eXhubndSM2ZJUEZtc2czLWVOdGR5UFUwbTB2QVZyUnZrYnc5WU0ifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjIl0sImV4cCI6NTMzOTI3ODgyNCwiaWF0IjoxNzM5MjgyNDI0LCJpc3MiOiJodHRwczovL2t1YmVybmV0ZXMuZGVmYXVsdC5zdmMiLCJqdGkiOiJlNjI3Yjc2Zi1kZjY3LTRkMTAtOGU2Mi1mMWMwMTA5Zjk2ODgiLCJrdWJlcm5ldGVzLmlvIjp7Im5hbWVzcGFjZSI6Imt1YmUtc3lzdGVtIiwic2VydmljZWFjY291bnQiOnsibmFtZSI6ImNsdXN0ZXItYWRtaW4tc2EiLCJ1aWQiOiJkOTlkOWUzMi00Njg1LTRmMWQtODExNC02ZmNkYWZkZTY4NjkifX0sIm5iZiI6MTczOTI4MjQyNCwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50Omt1YmUtc3lzdGVtOmNsdXN0ZXItYWRtaW4tc2EifQ.IARyjpHmTf-cO8jWPHQ1qJ10JhyD0WbNRSGuVAI-3TJyn11FOWuITd4Y_jeTj0R3jXwSB8AGOH5AOrL9Qpr-b4-wHBcbCGzYnjzkZ7YI6jVh0fkI6PBgweIeH52-CfTRkWv7U5kvKiToIQ_PXdoTGhjPZ-XFIB1zY-EFUC8n9vMXk70Za16g9ICH3qIsE8Ygq9FyfCPpf_E7_pf1esnJJ9nvPDjbeUCEoUMuIdBb2Z0UYN3Gx71pnQDes1PiICOUNxuRc-O_pEU6ywmXf2Pf7oI223xvHFQmuEkO3zdXzZlB59fK228u1fkk8h6qUtEV5ijCH1Mu7ED6_ZXjgGd-VhQzInMK6Fme9kwcqiLFQdakt9iHLFhYwYsDfAexc4UgN1cLIx9CKrVHmKsrcggzKwCVN9uDmKtNtwTjwBZ61X0UoA8ftHssEMlF57iNKnot0CiNHiNXTF1_9N7CMRMb84Dz5_YiGM8BUSpUEKkufx6_j-vtC1wn4Rz3MKdYU_nyKGfPwoet03Z8ttuA9D-rEL2XdDvmuA5UbrlGji1p8VphG2iqureU0Hy7l--YH5XX5-WWt4KeC9LDBzIBlq4FTG1oJABC85RQJui2O4xlMSMVZouDFeuQaa0frpe99CH0Mt33UQoPFcdCAeNa2WyT8kx5iKlIw7YFB-kNenIaT48'
+cluster_url: 'apps.cluster-qd78t.dynamic.redhatworkshops.io'
+
+acs_central_services_namespace: 'stackrox'
+acs_central_password_base64: 'YWRtaW4xMjM0' #base64
+acs_central_password_plain_text: 'admin1234'
+acs_central_user: 'admin'
+
+quay_admin_username: 'admin'
+quay_admin_password: 'admin1234'
+quay_robot_account: 'quay_robot'
+quay_namespace: 'quay'
+quay_registry_name: '{{ company_name }}-registry'
+
+sonar_namespace: 'sonarqube'
+sonar_token: 'squ_c66651edcaa466fb8d8e13a02d09402b14a50a86'
+sonar_user: 'admin'
+sonar_password: 'admin1234'
+
+gitlab_user: 'root'
+gitlab_namespace: 'gitlab-system'
+  
+gogs_namespace: 'gogs'
+gogs_user: 'gogs'
+gogs_password: 'gogs'
+
+nexus_namespace: 'nexus'
+nexus_user: 'admin'
+nexus_password: 'admin1234'
+
+  
+#  ansible-vault encrypt all.yaml
+#  ansible-vault dencrypt all.yaml
+#  ansible-vault view all.yaml
+#
+#  ansible-playbook bootstrap/deploy_pipeline.yaml -v -e "install=quay,acs" --ask-vault-pass

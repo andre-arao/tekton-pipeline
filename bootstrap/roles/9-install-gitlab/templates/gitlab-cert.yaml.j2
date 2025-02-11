@@ -1,0 +1,17 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cert-gitlab
+  namespace: "{{ gitlab_namespace }}"
+spec:
+  isCA: false
+  commonName: gitlab
+  secretName: sct-gitlab-tls
+  dnsNames:
+    - "apps.cluster-qd78t.dynamic.redhatworkshops.io"
+    - "*.apps.cluster-qd78t.dynamic.redhatworkshops.io"
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-staging
+
+
